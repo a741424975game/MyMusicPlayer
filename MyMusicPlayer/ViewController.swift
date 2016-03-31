@@ -10,14 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mAlbumImageView: RadioImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        KVNProgress.setConfiguration(KVNProgressConfiguration.defaultConfiguration())
+        mAlbumImageView.startRotation()
     }
     
     override func viewDidAppear(animated: Bool) {
-        KVNProgress.showWithStatus("This is a test") 
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,6 +26,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func pauseBtnClicked(sender: AnyObject) {
+        mAlbumImageView.pauseRotation()
+    }
 
+    @IBAction func resumeBtnClicked(sender: AnyObject) {
+        mAlbumImageView.resumeRotation()
+    }
 }
 

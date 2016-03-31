@@ -26,6 +26,7 @@
 		198447361CAA4B85006C6BC1 /* AFSoundQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1984472D1CAA4B85006C6BC1 /* AFSoundQueue.m */; };
 		198447371CAA4B85006C6BC1 /* AFSoundRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 1984472F1CAA4B85006C6BC1 /* AFSoundRecord.m */; };
 		198447381CAA4B85006C6BC1 /* NSTimer+AFSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 198447311CAA4B85006C6BC1 /* NSTimer+AFSoundManager.m */; };
+		1984473E1CAA8ECF006C6BC1 /* RadioImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984473D1CAA8ECF006C6BC1 /* RadioImageView.swift */; };
 		888DEB20158718203E9DD570 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AF2CDB4C39759ACB17CDC7 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		1984472F1CAA4B85006C6BC1 /* AFSoundRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSoundRecord.m; sourceTree = "<group>"; };
 		198447301CAA4B85006C6BC1 /* NSTimer+AFSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+AFSoundManager.h"; sourceTree = "<group>"; };
 		198447311CAA4B85006C6BC1 /* NSTimer+AFSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+AFSoundManager.m"; sourceTree = "<group>"; };
+		1984473D1CAA8ECF006C6BC1 /* RadioImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadioImageView.swift; path = AFSoundManager/RadioImageView.swift; sourceTree = "<group>"; };
 		6818ACAD1DBA1F83180E562A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		89A8FDD2B61C00258D1FFE56 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A7AF2CDB4C39759ACB17CDC7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +144,7 @@
 			children = (
 				198446BE1CAA4808006C6BC1 /* AppDelegate.swift */,
 				198446C01CAA4808006C6BC1 /* ViewController.swift */,
+				1984473D1CAA8ECF006C6BC1 /* RadioImageView.swift */,
 				198446C21CAA4808006C6BC1 /* Main.storyboard */,
 				198446C81CAA4809006C6BC1 /* Assets.xcassets */,
 				198446CA1CAA4809006C6BC1 /* LaunchScreen.storyboard */,
@@ -463,6 +466,7 @@
 				1984471A1CAA48A9006C6BC1 /* KVNProgress.m in Sources */,
 				1984471B1CAA48A9006C6BC1 /* KVNProgressConfiguration.m in Sources */,
 				198447181CAA48A9006C6BC1 /* UIImage+KVNEmpty.m in Sources */,
+				1984473E1CAA8ECF006C6BC1 /* RadioImageView.swift in Sources */,
 				198447351CAA4B85006C6BC1 /* AFSoundPlayback.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
