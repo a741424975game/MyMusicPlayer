@@ -12,6 +12,9 @@ class RadioImageView: UIImageView {
 
     private var albumView: UIImageView?
     
+    var isRotating: Bool!
+    
+    
     /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -21,9 +24,9 @@ class RadioImageView: UIImageView {
     */
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.albumView = UIImageView(frame: CGRectMake(self.frame.size.width / 2 - 75, self.frame.size.height / 2 - 75, 150, 150))
+        self.albumView = UIImageView(frame: CGRectMake(self.frame.size.width / 2 - 69, self.frame.size.height / 2 - 69, 138, 138))
         albumView?.clipsToBounds = true
-        self.albumView?.layer.cornerRadius = 75
+        self.albumView?.layer.cornerRadius = 69
         self.albumView?.image = UIImage(named: "image")
         self.addSubview(self.albumView!)
     }
@@ -32,23 +35,31 @@ class RadioImageView: UIImageView {
         let rotateAnimate = CABasicAnimation(keyPath: "transform.rotation")
         rotateAnimate.fromValue = 0.0
         rotateAnimate.toValue = 2.0 * M_PI
-        rotateAnimate.duration = 20.0
+        rotateAnimate.duration = 60.0
         rotateAnimate.repeatCount = MAXFLOAT
         self.albumView?.layer.addAnimation(rotateAnimate, forKey: nil)
+        self.isRotating = true
     }
     
     func pauseRotation() {
-        if self.layer.speed != 0.0 {
-            let pausedTime = self.layer.convertTime(CACurrentMediaTime(), toLayer: nil)
-            self.layer.speed = 0.0
-            self.layer.timeOffset = pausedTime
+        if self.isRotating! {
+            let pausedTime = (self.albumView?.layer.convertTime(CACurrentMediaTime(), toLayer: self.albumView?.layer))! - (self.albumView?.layer.beginTime)!
+            self.albumView?.layer.timeOffset = pausedTime
+            self.albumView?.layer.speed = 0.0
+            self.isRotating = false
         }
     }
     
     func resumeRotation() {
-            let pausedTime = self.layer.convertTime(CACurrentMediaTime(), toLayer: nil)
-            self.layer.speed = 1.0
-            self.layer.timeOffset = pausedTime
+        if !self.isRotating! {
+            let pausedTime = self.albumView?.layer.timeOffset
+            self.albumView?.layer.speed = 1.0
+            self.albumView?.layer.timeOffset	 = 0.0
+            self.albumView?.layer.beginTime = 0.0
+            let timeSincePaused = (self.albumView?.layer.convertTime(CACurrentMediaTime(), toLayer:  self.albumView?.layer))! - pausedTime!
+            self.albumView?.layer.beginTime = timeSincePaused
+            self.isRotating = true
+        }
     }
     
 }

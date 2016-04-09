@@ -13,36 +13,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cm2_play_disc" id="mtu-BF-cSh" customClass="RadioImageView" customModule="MyMusicPlayer" customModuleProvider="target">
-                                <rect key="frame" x="41" y="40" width="238" height="238"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="qGC-qh-TVp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="v56-Z1-rva">
-                                <rect key="frame" x="229" y="465" width="55" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cm2_play_disc" id="mtu-BF-cSh" customClass="RadioImageView" customModule="MyMusicPlayer" customModuleProvider="target">
+                                <rect key="frame" x="50" y="96" width="220" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Resume"/>
-                                <connections>
-                                    <action selector="resumeBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XrJ-40-QSW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="es8-eT-Ho1">
-                                <rect key="frame" x="41" y="465" width="46" height="30"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7mo-vt-2bu">
+                                <rect key="frame" x="123" y="431" width="75" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0bF-8K-5fM">
-                                <rect key="frame" x="139" y="465" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pause"/>
                                 <connections>
-                                    <action selector="pauseBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TL8-5t-Bhj"/>
+                                    <action selector="controlBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VJt-tx-Wyx"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cm2_play_needle" id="okx-EG-AvH" customClass="NeedleImageView" customModule="MyMusicPlayer" customModuleProvider="target">
+                                <rect key="frame" x="145" y="32" width="64" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="controlBtn" destination="7mo-vt-2bu" id="42l-YJ-FfH"/>
                         <outlet property="mAlbumImageView" destination="mtu-BF-cSh" id="GgI-lw-Jbt"/>
+                        <outlet property="mBgImageView" destination="qGC-qh-TVp" id="BXj-h0-YSh"/>
+                        <outlet property="mNeedleImageView" destination="okx-EG-AvH" id="V7S-OV-bGc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -52,5 +50,6 @@
     </scenes>
     <resources>
         <image name="cm2_play_disc" width="238" height="238"/>
+        <image name="cm2_play_needle" width="110" height="182"/>
     </resources>
 </document>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "RadioImageView.pauseRotation() -&gt; ():RadioImageView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.layer.convertTime(CACurrentMediaTime(), toLayer: nil)">
+            </PersistentString>
+            <PersistentString
+               value = "self.layer.speed">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

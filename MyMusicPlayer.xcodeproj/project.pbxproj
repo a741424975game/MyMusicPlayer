@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192D1DE31CB89DA600276338 /* NeedleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D1DE21CB89DA600276338 /* NeedleImageView.swift */; };
 		198446BF1CAA4808006C6BC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198446BE1CAA4808006C6BC1 /* AppDelegate.swift */; };
 		198446C11CAA4808006C6BC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198446C01CAA4808006C6BC1 /* ViewController.swift */; };
 		198446C41CAA4808006C6BC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 198446C21CAA4808006C6BC1 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		192D1DE21CB89DA600276338 /* NeedleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleImageView.swift; sourceTree = "<group>"; };
 		198446BB1CAA4808006C6BC1 /* MyMusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		198446BE1CAA4808006C6BC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		198446C01CAA4808006C6BC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				198446BE1CAA4808006C6BC1 /* AppDelegate.swift */,
 				198446C01CAA4808006C6BC1 /* ViewController.swift */,
 				1984473D1CAA8ECF006C6BC1 /* RadioImageView.swift */,
+				192D1DE21CB89DA600276338 /* NeedleImageView.swift */,
 				198446C21CAA4808006C6BC1 /* Main.storyboard */,
 				198446C81CAA4809006C6BC1 /* Assets.xcassets */,
 				198446CA1CAA4809006C6BC1 /* LaunchScreen.storyboard */,
@@ -454,6 +457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				192D1DE31CB89DA600276338 /* NeedleImageView.swift in Sources */,
 				198446C71CAA4809006C6BC1 /* MyMusicPlayer.xcdatamodeld in Sources */,
 				198447381CAA4B85006C6BC1 /* NSTimer+AFSoundManager.m in Sources */,
 				198446C11CAA4808006C6BC1 /* ViewController.swift in Sources */,
