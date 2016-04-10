@@ -10,7 +10,7 @@ import UIKit
 
 public class KGDrawerSpringAnimator: NSObject {
     
-    let kKGCenterViewDestinationScale:CGFloat = 0.7
+    let kKGCenterViewDestinationScale:CGFloat = 1.0
     
     public var animationDelay: NSTimeInterval        = 0.0
     public var animationDuration: NSTimeInterval     = 0.7

@@ -34,7 +34,6 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         self.mAlbumImageView.startRotation()
-        self.setControlBtnState()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,22 +45,20 @@ class ViewController: UIViewController {
         if self.mAlbumImageView.isRotating! {
             self.mNeedleImageView.moveOutTheNeedle()
             self.mAlbumImageView.pauseRotation()
-            self.controlBtn.setTitle("Resume", forState: .Normal)
+            self.controlBtn.setImage(UIImage(named: "cm2_mv_btn_pause_ver"), forState: .Normal)
         }else{
             self.mNeedleImageView.moveInTheNeedle()
             self.mAlbumImageView.resumeRotation()
-            self.controlBtn.setTitle("Pause", forState: .Normal)
+            self.controlBtn.setImage(UIImage(named: "cm2_mv_btn_play_ver"), forState: .Normal)
         }
     }
     
-    func setControlBtnState() {
-        if self.mAlbumImageView.isRotating! {
-            self.controlBtn.setTitle("Pause", forState: .Normal)
-        }else{
-            self.controlBtn.setTitle("Resume", forState: .Normal)
-        }
+    @IBAction func listBtnClicked(sender: AnyObject) {
+        print("test")
+        let appdelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appdelegate.toggleRightDrawer(sender, animated: true)
     }
-
+    
     
 }
 

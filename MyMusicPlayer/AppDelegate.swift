@@ -8,15 +8,107 @@
 
 import UIKit
 import CoreData
+import KGFloatingDrawer
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let kKGDrawersStoryboardName = "Main"
+
+    let kKGCenterViewControllerStoryboardId = "player"
+//    let kKGLeftDrawerStoryboardId = "left"
+    let kKGRightDrawerStoryboardId = "list"
+    
+    private var _drawerViewController: KGDrawerViewController?
+    var drawerViewController: KGDrawerViewController {
+        get {
+            if let viewController = _drawerViewController {
+                return viewController
+            }
+            return prepareDrawerViewController()
+        }
+    }
+    
+    func prepareDrawerViewController() -> KGDrawerViewController {
+        let drawerViewController = KGDrawerViewController()
+        
+        drawerViewController.centerViewController = myCenterViewController()
+//        drawerViewController.leftViewController = leftViewController()
+        drawerViewController.rightViewController = rightViewController()
+        
+        _drawerViewController = drawerViewController
+        
+        return drawerViewController
+    }
+    
+    private func drawerStoryboard() -> UIStoryboard {
+        let storyboard = UIStoryboard(name: kKGDrawersStoryboardName, bundle: nil)
+        return storyboard
+    }
+    
+    private func viewControllerForStoryboardId(storyboardId: String) -> UIViewController {
+        let viewController: UIViewController = drawerStoryboard().instantiateViewControllerWithIdentifier(storyboardId)
+        return viewController
+    }
+    
+    func myCenterViewController() -> UIViewController {
+        let viewController = viewControllerForStoryboardId(kKGCenterViewControllerStoryboardId)
+        return viewController
+    }
+    
+//    private func leftViewController() -> UIViewController {
+//        let viewController = viewControllerForStoryboardId(kKGLeftDrawerStoryboardId)
+//        return viewController
+//    }
+    
+    private func rightViewController() -> UIViewController {
+        let viewController = viewControllerForStoryboardId(kKGRightDrawerStoryboardId)
+        return viewController
+    }
+    
+    func toggleLeftDrawer(sender:AnyObject, animated:Bool) {
+        _drawerViewController?.toggleDrawer(.Left, animated: true, complete: { (finished) -> Void in
+            // do nothing
+        })
+    }
+    
+    func toggleRightDrawer(sender:AnyObject, animated:Bool) {
+        _drawerViewController?.toggleDrawer(.Right, animated: true, complete: { (finished) -> Void in
+            // do nothing
+        })
+    }
+    
+    private var _centerViewController: UIViewController?
+    var centerViewController: UIViewController {
+        get {
+            if let viewController = _centerViewController {
+                return viewController
+            }
+            return myCenterViewController()
+        }
+        set {
+            if let drawerViewController = _drawerViewController {
+                drawerViewController.closeDrawer(drawerViewController.currentlyOpenedSide, animated: true) { finished in }
+                if drawerViewController.centerViewController != newValue {
+                    drawerViewController.centerViewController = newValue
+                }
+            }
+            _centerViewController = newValue
+        }
+    }
+
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        window?.rootViewController = drawerViewController
+        
+        window?.makeKeyAndVisible()
+    
         return true
     }
 

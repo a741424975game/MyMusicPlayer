@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "cm2_mv_btn_back@2x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "cm2_play_needle_play-ip6@2x.png",
       "scale" : "2x"
     },
     {
