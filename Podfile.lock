@@ -1,13 +1,15 @@
 PODS:
-  - Alamofire (3.3.0)
+  - Alamofire (3.4.1)
   - KGFloatingDrawer (0.2.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.3.0)
+  - Alamofire (~> 3.4.1)
   - KGFloatingDrawer (~> 0.2.0)
 
 SPEC CHECKSUMS:
-  Alamofire: 9054db4a1b1ca9e363223183e01cea380159a27c
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   KGFloatingDrawer: b0c2810954bfb61f4d4dd01b8891d5c23933e368
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 9be391236c1d1fac381183d949af403d5de31b3c
+
+COCOAPODS: 1.0.1

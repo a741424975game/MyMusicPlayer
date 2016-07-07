@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    var channelId = 0
+    
     let kKGDrawersStoryboardName = "Main"
 
     let kKGCenterViewControllerStoryboardId = "player"
@@ -22,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let kKGRightDrawerStoryboardId = "list"
     
     private var _drawerViewController: KGDrawerViewController?
+    
     var drawerViewController: KGDrawerViewController {
         get {
             if let viewController = _drawerViewController {

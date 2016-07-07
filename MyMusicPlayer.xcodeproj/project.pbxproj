@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1917A4911D2DF4D400E973A6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1917A4901D2DF4D400E973A6 /* AVFoundation.framework */; };
+		1917A4931D2DF4E000E973A6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1917A4921D2DF4E000E973A6 /* AudioToolbox.framework */; };
+		1917A4951D2DF4EB00E973A6 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1917A4941D2DF4EB00E973A6 /* MediaPlayer.framework */; };
 		192D1DE31CB89DA600276338 /* NeedleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192D1DE21CB89DA600276338 /* NeedleImageView.swift */; };
 		198446BF1CAA4808006C6BC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198446BE1CAA4808006C6BC1 /* AppDelegate.swift */; };
 		198446C11CAA4808006C6BC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198446C01CAA4808006C6BC1 /* ViewController.swift */; };
@@ -29,7 +32,7 @@
 		198447381CAA4B85006C6BC1 /* NSTimer+AFSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 198447311CAA4B85006C6BC1 /* NSTimer+AFSoundManager.m */; };
 		1984473E1CAA8ECF006C6BC1 /* RadioImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984473D1CAA8ECF006C6BC1 /* RadioImageView.swift */; };
 		19E13FFC1CB9E81100F14036 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E13FFB1CB9E81000F14036 /* ListTableViewController.swift */; };
-		888DEB20158718203E9DD570 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AF2CDB4C39759ACB17CDC7 /* Pods.framework */; };
+		38FA573E9AA4BC09AAC995CC /* Pods_MyMusicPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9945A117007F9B446CC989EF /* Pods_MyMusicPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1917A4901D2DF4D400E973A6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1917A4921D2DF4E000E973A6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1917A4941D2DF4EB00E973A6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		192D1DE21CB89DA600276338 /* NeedleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleImageView.swift; sourceTree = "<group>"; };
 		198446BB1CAA4808006C6BC1 /* MyMusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		198446BE1CAA4808006C6BC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,8 +96,9 @@
 		198447311CAA4B85006C6BC1 /* NSTimer+AFSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+AFSoundManager.m"; sourceTree = "<group>"; };
 		1984473D1CAA8ECF006C6BC1 /* RadioImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadioImageView.swift; path = AFSoundManager/RadioImageView.swift; sourceTree = "<group>"; };
 		19E13FFB1CB9E81000F14036 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
-		6818ACAD1DBA1F83180E562A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		89A8FDD2B61C00258D1FFE56 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		377D5A895452BDDAEAF3172A /* Pods-MyMusicPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMusicPlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMusicPlayer/Pods-MyMusicPlayer.release.xcconfig"; sourceTree = "<group>"; };
+		8AD6B151E650F012E43CD3C6 /* Pods-MyMusicPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMusicPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMusicPlayer/Pods-MyMusicPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		9945A117007F9B446CC989EF /* Pods_MyMusicPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMusicPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7AF2CDB4C39759ACB17CDC7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,7 +107,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888DEB20158718203E9DD570 /* Pods.framework in Frameworks */,
+				1917A4951D2DF4EB00E973A6 /* MediaPlayer.framework in Frameworks */,
+				1917A4931D2DF4E000E973A6 /* AudioToolbox.framework in Frameworks */,
+				1917A4911D2DF4D400E973A6 /* AVFoundation.framework in Frameworks */,
+				38FA573E9AA4BC09AAC995CC /* Pods_MyMusicPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,8 +138,8 @@
 				198446D51CAA4809006C6BC1 /* MyMusicPlayerTests */,
 				198446E01CAA4809006C6BC1 /* MyMusicPlayerUITests */,
 				198446BC1CAA4808006C6BC1 /* Products */,
-				546A7DF9311D7730D3FDD72E /* Pods */,
 				B2F7B2428ECF40A2729846C1 /* Frameworks */,
+				95D53A96E16417FC36DFE5B2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -257,11 +267,11 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		546A7DF9311D7730D3FDD72E /* Pods */ = {
+		95D53A96E16417FC36DFE5B2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6818ACAD1DBA1F83180E562A /* Pods.debug.xcconfig */,
-				89A8FDD2B61C00258D1FFE56 /* Pods.release.xcconfig */,
+				8AD6B151E650F012E43CD3C6 /* Pods-MyMusicPlayer.debug.xcconfig */,
+				377D5A895452BDDAEAF3172A /* Pods-MyMusicPlayer.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -269,7 +279,11 @@
 		B2F7B2428ECF40A2729846C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1917A4941D2DF4EB00E973A6 /* MediaPlayer.framework */,
+				1917A4921D2DF4E000E973A6 /* AudioToolbox.framework */,
+				1917A4901D2DF4D400E973A6 /* AVFoundation.framework */,
 				A7AF2CDB4C39759ACB17CDC7 /* Pods.framework */,
+				9945A117007F9B446CC989EF /* Pods_MyMusicPlayer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -281,12 +295,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 198446E61CAA4809006C6BC1 /* Build configuration list for PBXNativeTarget "MyMusicPlayer" */;
 			buildPhases = (
-				45EC9A743821E417E902BDA8 /* Check Pods Manifest.lock */,
+				E6429DE39051EBE95C281537 /* [CP] Check Pods Manifest.lock */,
 				198446B71CAA4808006C6BC1 /* Sources */,
 				198446B81CAA4808006C6BC1 /* Frameworks */,
 				198446B91CAA4808006C6BC1 /* Resources */,
-				471145257D1EB191136E8D6F /* Embed Pods Frameworks */,
-				C4CA4A16C803E8C01C9F6197 /* Copy Pods Resources */,
+				649E3EB73B83F2F8ACF09E35 /* [CP] Embed Pods Frameworks */,
+				8576CD121C932A0CB83FDE0D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -408,49 +422,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		45EC9A743821E417E902BDA8 /* Check Pods Manifest.lock */ = {
+		649E3EB73B83F2F8ACF09E35 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMusicPlayer/Pods-MyMusicPlayer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8576CD121C932A0CB83FDE0D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyMusicPlayer/Pods-MyMusicPlayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6429DE39051EBE95C281537 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		471145257D1EB191136E8D6F /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C4CA4A16C803E8C01C9F6197 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -617,25 +631,31 @@
 		};
 		198446E71CAA4809006C6BC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6818ACAD1DBA1F83180E562A /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 8AD6B151E650F012E43CD3C6 /* Pods-MyMusicPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyMusicPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Gzp.MyMusicPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = elfgzp.cn.MyMusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		198446E81CAA4809006C6BC1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89A8FDD2B61C00258D1FFE56 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 377D5A895452BDDAEAF3172A /* Pods-MyMusicPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyMusicPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Gzp.MyMusicPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = elfgzp.cn.MyMusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

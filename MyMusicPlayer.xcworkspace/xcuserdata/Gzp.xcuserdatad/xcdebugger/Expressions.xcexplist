@@ -13,5 +13,19 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "ListTableViewController.(loadChannelList() -&gt; ()).(closure #1):ListTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response">
+            </PersistentString>
+            <PersistentString
+               value = "(response.result.value as! NSDictionary)[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.controlBtnClicked(AnyObject) -&gt; ():ViewController.swift">
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

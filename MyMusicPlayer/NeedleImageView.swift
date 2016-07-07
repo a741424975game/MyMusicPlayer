@@ -23,6 +23,7 @@ class NeedleImageView: UIImageView {
         super.init(coder: aDecoder)
         self.setAnchorPoint(CGPointMake(0.25, 0.16), forView: self)
         self.needleOriginTransform = self.transform
+        self.moveOutTheNeedle()
     }
 
     

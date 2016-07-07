@@ -12,6 +12,8 @@ class RadioImageView: UIImageView {
 
     private var albumView: UIImageView?
     
+    var isStarted: Bool!
+    
     var isRotating: Bool!
     
     
@@ -24,6 +26,8 @@ class RadioImageView: UIImageView {
     */
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.isStarted = false
+        self.isRotating = false
         self.albumView = UIImageView(frame: CGRectMake(self.frame.size.width / 2 - 69, self.frame.size.height / 2 - 69, 138, 138))
         albumView?.clipsToBounds = true
         self.albumView?.layer.cornerRadius = 69
@@ -32,6 +36,7 @@ class RadioImageView: UIImageView {
     }
     
     func startRotation() {
+        self.isStarted = true
         let rotateAnimate = CABasicAnimation(keyPath: "transform.rotation")
         rotateAnimate.fromValue = 0.0
         rotateAnimate.toValue = 2.0 * M_PI

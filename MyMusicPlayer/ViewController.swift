@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -17,7 +18,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var mNeedleImageView: NeedleImageView!
     
+    @IBOutlet weak var mTime: UILabel!
+    
+    @IBOutlet weak var mProcess: UISlider!
+    
+
     @IBOutlet weak var controlBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,10 +37,10 @@ class ViewController: UIViewController {
         visualView.alpha = 1.0
         visualView.frame = UIScreen.mainScreen().bounds
         self.mBgImageView.addSubview(visualView)
+        self.loadMusic()
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.mAlbumImageView.startRotation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,23 +49,41 @@ class ViewController: UIViewController {
     }
 
     @IBAction func controlBtnClicked(sender: AnyObject) {
-        if self.mAlbumImageView.isRotating! {
-            self.mNeedleImageView.moveOutTheNeedle()
-            self.mAlbumImageView.pauseRotation()
-            self.controlBtn.setImage(UIImage(named: "cm2_mv_btn_pause_ver"), forState: .Normal)
-        }else{
+        if !self.mAlbumImageView.isStarted! {
             self.mNeedleImageView.moveInTheNeedle()
-            self.mAlbumImageView.resumeRotation()
-            self.controlBtn.setImage(UIImage(named: "cm2_mv_btn_play_ver"), forState: .Normal)
+            self.mAlbumImageView.startRotation()
+        }else{
+            if self.mAlbumImageView.isRotating! {
+                self.mNeedleImageView.moveOutTheNeedle()
+                self.mAlbumImageView.pauseRotation()
+                self.controlBtn.setImage(UIImage(named: "cm2_mv_btn_pause_ver"), forState: .Normal)
+            }else{
+                self.mNeedleImageView.moveInTheNeedle()
+                self.mAlbumImageView.resumeRotation()
+                self.controlBtn.setImage(UIImage(named: "cm2_mv_btn_play_ver"), forState: .Normal)
+            }
         }
     }
     
     @IBAction func listBtnClicked(sender: AnyObject) {
-        print("test")
         let appdelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appdelegate.toggleRightDrawer(sender, animated: true)
     }
     
+
+    @IBAction func mProcessController(sender: AnyObject) {
+    }
     
+    func loadMusic() {
+        let appdelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let channelId = appdelegate.channelId
+        Alamofire.request(.GET, "https://douban.fm/j/mine/playlist", parameters: ["channel":channelId]).responseJSON { (response) in
+            let musicInfo = response.result.value?.valueForKey("song")![0]
+            
+            
+        }
+    }
+
+
 }
 

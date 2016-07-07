@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Alamofire
 
 class ListTableViewController: UITableViewController {
+    
+    var channelList = Array<NSDictionary>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.loadChannelList()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,23 +33,37 @@ class ListTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.channelList.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("channel", forIndexPath: indexPath)
+        cell.textLabel?.text = channelList[indexPath.row].valueForKey("name")?.description
         return cell
     }
-    */
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let channelId = channelList[indexPath.row].valueForKey("channel_id")
+        let appdelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appdelegate.channelId = channelId as! Int
+        appdelegate.toggleRightDrawer(tableView, animated: true)
+
+    }
+    
+    func loadChannelList() {
+        Alamofire.request(.GET, "https://www.douban.com/j/app/radio/channels").responseJSON { (response) in
+            if response.result.value != nil{
+                self.channelList = response.result.value?.valueForKey("channels") as! [NSDictionary]
+                self.tableView.reloadData()
+            }
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
