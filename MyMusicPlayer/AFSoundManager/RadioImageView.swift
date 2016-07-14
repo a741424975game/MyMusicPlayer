@@ -10,7 +10,7 @@ import UIKit
 
 class RadioImageView: UIImageView {
 
-    private var albumView: UIImageView?
+    var albumView: UIImageView?
     
     var isStarted: Bool!
     

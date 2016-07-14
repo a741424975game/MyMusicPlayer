@@ -9,14 +9,21 @@
 import UIKit
 import Alamofire
 
+protocol ChannelProtocal {
+    func onChangeChannel(channelId: Int32)
+}
+
 class ListTableViewController: UITableViewController {
     
     var channelList = Array<NSDictionary>()
-
+    var appdelegate: AppDelegate! = nil
+    var delegate: ChannelProtocal?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadChannelList()
-        
+        self.appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -49,11 +56,12 @@ class ListTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let channelId = channelList[indexPath.row].valueForKey("channel_id")
-        let appdelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appdelegate.channelId = channelId as! Int
-        appdelegate.toggleRightDrawer(tableView, animated: true)
-
+//        let channelId = (channelList[indexPath.row].valueForKey("channel_id") as! NSString).intValue
+        let channelId = channelList[indexPath.row].valueForKey("channel_id")?.intValue
+        appdelegate.channelId = channelId!
+        self.delegate = self.appdelegate.centerViewController as! ViewController
+        self.delegate?.onChangeChannel(channelId!)
+        self.appdelegate.toggleRightDrawer(tableView, animated: true)
     }
     
     func loadChannelList() {

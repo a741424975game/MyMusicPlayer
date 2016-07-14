@@ -89,6 +89,7 @@
                         <outlet property="mNeedleImageView" destination="okx-EG-AvH" id="V7S-OV-bGc"/>
                         <outlet property="mProcess" destination="qlP-uU-ynn" id="j03-tj-cV3"/>
                         <outlet property="mTime" destination="HDX-1G-FWH" id="EwR-zS-VKx"/>
+                        <outlet property="mTitle" destination="eyo-zE-7Wc" id="LRY-ri-TQ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

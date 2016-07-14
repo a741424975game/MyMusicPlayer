@@ -13,9 +13,9 @@ import KGFloatingDrawer
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var channelId: Int32 = 0
     
-    var channelId = 0
+    var window: UIWindow?
     
     let kKGDrawersStoryboardName = "Main"
 
@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        return viewController
 //    }
     
-    private func rightViewController() -> UIViewController {
+    func rightViewController() -> UIViewController {
         let viewController = viewControllerForStoryboardId(kKGRightDrawerStoryboardId)
         return viewController
     }

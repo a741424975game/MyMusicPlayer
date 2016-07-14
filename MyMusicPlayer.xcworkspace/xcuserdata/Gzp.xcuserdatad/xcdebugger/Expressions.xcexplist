@@ -3,13 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "RadioImageView.pauseRotation() -&gt; ():RadioImageView.swift">
+         contextName = "ViewController.(loadMusic() -&gt; ()).(closure #1).(closure #1).(closure #1):ViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.layer.convertTime(CACurrentMediaTime(), toLayer: nil)">
-            </PersistentString>
-            <PersistentString
-               value = "self.layer.speed">
+               value = "self.mtitle.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -25,7 +22,40 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "ListTableViewController.tableView(UITableView, didSelectRowAtIndexPath : NSIndexPath) -&gt; ():ListTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "channelList">
+            </PersistentString>
+            <PersistentString
+               value = "self.delegate">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ViewController.controlBtnClicked(AnyObject) -&gt; ():ViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "RadioImageView.pauseRotation() -&gt; ():RadioImageView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.layer.convertTime(CACurrentMediaTime(), toLayer: nil)">
+            </PersistentString>
+            <PersistentString
+               value = "self.layer.speed">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.listBtnClicked(AnyObject) -&gt; ():ViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.(loadMusic() -&gt; ()).(closure #1).(closure #1):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.mtitle.text">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>
